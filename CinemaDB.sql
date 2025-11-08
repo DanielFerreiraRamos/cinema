@@ -35,15 +35,11 @@ create table Filme (
 	FilmeId int primary key,
     Titulo varchar(100) not null,
     Genero varchar(50),
-    Duracao int, -- em minutos
     ClassificacaoEtaria varchar(10),
-    Diretor varchar(100),
-    Sinopse varchar(300),
-    DataLancamento date,
+    Descricao varchar(300),
     DataInicioCartaz date not null,
     DataFimCartaz date,
     AdicionadoPor int not null,
-    DataAdicaoCartaz datetime default getdate(),
     foreign key (AdicionadoPor) references Administrador(AdministradorId)
 );
 go
